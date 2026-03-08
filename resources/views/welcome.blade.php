@@ -279,7 +279,8 @@
             position: absolute; top: -30px; opacity: 0;
             animation: dropletDescend linear infinite;
         }
-        .droplet--far { filter: blur(2px); opacity: 0.5; }
+        .droplet { filter: blur(2px); }
+        .droplet--far { filter: blur(5px); opacity: 0.5; }
         .drop-svg {
             display: block;
             filter: drop-shadow(0 0 3px rgba(34,211,238,0.3)) drop-shadow(0 1px 4px rgba(34,211,238,0.1));
@@ -300,7 +301,7 @@
             width: 12px; height: 3px;
             border: 1px solid rgba(34,211,238,0.15);
             border-radius: 50%; opacity: 0;
-            animation: splashExpand 8s ease-out infinite;
+            animation: splashExpand 5.2s ease-out infinite;
         }
         @keyframes splashExpand {
             0%, 75% { transform: scale(0); opacity: 0; }
