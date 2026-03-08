@@ -1,0 +1,38 @@
+title: Service
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: description
+        field:
+          type: textarea
+      -
+        handle: icon
+        field:
+          type: text
+          display: 'Font Awesome Icon'
+      -
+        handle: tags
+        field:
+          type: list
+          display: Tags
+      -
+        handle: card_class
+        field:
+          type: text
+          display: 'Card Class'
+          instructions: 'Bento grid class: srv-wide (7col), srv-narrow (5col), srv-third (4col), srv-emergency (5col dark), srv-medium (7col)'
+      -
+        handle: is_emergency
+        field:
+          type: toggle
+          display: 'Emergency Card'
+          instructions: 'Dark themed card with pulsing dot'

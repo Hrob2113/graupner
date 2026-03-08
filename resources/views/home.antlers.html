@@ -1,0 +1,224 @@
+{{ layout:layout }}
+
+{{# This is the main content that will be injected into the `welcome.blade.php` layout #}}
+{{ section:content }}
+    <!-- NAV TOP BAR -->
+    <div class="nav-top" id="navTop">
+        <div class="nav-top-inner">
+            <div class="nav-top-left">
+                <span><i class="fas fa-clock"></i> {{ site:working_hours }}</span>
+                <span><i class="fas fa-location-dot"></i> {{ site:location }}</span>
+            </div>
+            <div class="nav-top-right">
+                <a href="{{ site:facebook_url }}" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="{{ site:instagram_url }}" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="{{ site:whatsapp_url }}" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <span style="color:rgba(255,255,255,0.08); margin: 0 4px;">|</span>
+                <a href="tel:{{ site:phone }}" class="nav-phone-highlight">
+                    <span class="phone-icon"><i class="fas fa-phone"></i></span>
+                    {{ site:phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV MAIN -->
+    <nav id="mainNav">
+        <div class="wrap">
+            <div class="nav-left" data-aos="fade-right">
+                <a href="#" class="logo">
+                    <span class="logo-first">Roman</span>
+                    <span class="logo-last">Graupner</span>
+                    <span class="logo-drop"><svg viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C8 0 0 9 0 13a8 8 0 0016 0C16 9 8 0 8 0z" fill="url(#dropGrad)"/><defs><linearGradient id="dropGrad" x1="0" y1="0" x2="16" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#services">Služby</a></li>
+                    <li><a href="#gallery">Práce</a></li>
+                    <li><a href="#reviews">Recenze</a></li>
+                    <li><a href="tel:{{ site:phone }}" class="mobile-phone" style="display:none;"><i class="fas fa-phone"></i> {{ site:phone }}</a></li>
+                </ul>
+            </div>
+            <div class="nav-right" data-aos="fade-left">
+                <a href="tel:{{ site:phone }}" class="nav-phone"><i class="fas fa-phone"></i> {{ site:phone }}</a>
+                <a href="#contact" class="nav-cta">Nezávazná poptávka</a>
+            </div>
+            <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- LANDING BANNER -->
+    <header data-section="landing">
+        <span data-ambient="primary"></span>
+        <span data-ambient="secondary"></span>
+
+        <!-- Rainfall — subtle animated water drops -->
+        <aside class="rain-field" aria-hidden="true">
+            <svg style="position:absolute;width:0;height:0;">
+                <defs>
+                    <linearGradient id="dropFillGrad" x1="6" y1="0" x2="6" y2="18" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(34,211,238,0.9)"/>
+                        <stop offset="40%" stop-color="rgba(34,211,238,0.6)"/>
+                        <stop offset="100%" stop-color="rgba(59,130,246,0.2)"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="droplet" style="left:5%; animation-duration:9s; animation-delay:0s;"><svg viewBox="0 0 12 18" class="drop-svg drop-lg"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:14%; animation-duration:11s; animation-delay:2s;"><svg viewBox="0 0 12 18" class="drop-svg drop-md"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:22%; animation-duration:12s; animation-delay:5s;"><svg viewBox="0 0 12 18" class="drop-svg drop-lg"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:31%; animation-duration:10s; animation-delay:1s;"><svg viewBox="0 0 12 18" class="drop-svg drop-sm"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:40%; animation-duration:13s; animation-delay:4s;"><svg viewBox="0 0 12 18" class="drop-svg drop-md"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:48%; animation-duration:10s; animation-delay:7s;"><svg viewBox="0 0 12 18" class="drop-svg drop-sm"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:55%; animation-duration:12.5s; animation-delay:1.5s;"><svg viewBox="0 0 12 18" class="drop-svg drop-lg"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:64%; animation-duration:9.5s; animation-delay:6s;"><svg viewBox="0 0 12 18" class="drop-svg drop-md"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:72%; animation-duration:11.5s; animation-delay:3s;"><svg viewBox="0 0 12 18" class="drop-svg drop-lg"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:80%; animation-duration:12s; animation-delay:0.5s;"><svg viewBox="0 0 12 18" class="drop-svg drop-sm"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:87%; animation-duration:9s; animation-delay:8s;"><svg viewBox="0 0 12 18" class="drop-svg drop-md"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet" style="left:94%; animation-duration:11s; animation-delay:3.5s;"><svg viewBox="0 0 12 18" class="drop-svg drop-sm"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet droplet--far" style="left:10%; animation-duration:18s; animation-delay:2s;"><svg viewBox="0 0 12 18" class="drop-svg drop-xs"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet droplet--far" style="left:35%; animation-duration:20s; animation-delay:8s;"><svg viewBox="0 0 12 18" class="drop-svg drop-xs"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet droplet--far" style="left:60%; animation-duration:16s; animation-delay:5s;"><svg viewBox="0 0 12 18" class="drop-svg drop-xs"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="droplet droplet--far" style="left:85%; animation-duration:19s; animation-delay:11s;"><svg viewBox="0 0 12 18" class="drop-svg drop-xs"><path d="M6 0C6 0 0 9 0 12.5a6 6 0 0012 0C12 9 6 0 6 0z"/></svg></span>
+            <span class="splash" style="left:15%; bottom:8%; animation-delay:3.5s;"></span>
+            <span class="splash" style="left:32%; bottom:5%; animation-delay:6s;"></span>
+            <span class="splash" style="left:50%; bottom:10%; animation-delay:8.5s;"></span>
+            <span class="splash" style="left:70%; bottom:6%; animation-delay:4s;"></span>
+            <span class="splash" style="left:88%; bottom:9%; animation-delay:10s;"></span>
+            <div class="rain-pool"></div>
+        </aside>
+
+        <article class="container-inner">
+            <div class="pitch hero-anim-1">
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow__line"></span>
+                    <span>{{ site:site_name }}</span>
+                    <span class="hero-eyebrow__line hero-eyebrow__line--right"></span>
+                </div>
+                <h1 class="pitch__heading">{{ hero_heading }}</h1>
+                <p class="pitch__tagline">{{ hero_subheading }}</p>
+                <div class="trust-badges">
+                    <span class="trust-badge"><i class="fas fa-shield-halved"></i> {{ hero_badge_text }}</span>
+                    <span class="trust-badge"><i class="fas fa-location-dot"></i> {{ site:location }}</span>
+                    <span class="trust-badge"><i class="fas fa-clock"></i> {{ site:emergency_hours }}</span>
+                </div>
+                <div class="cta-group">
+                    <a href="#contact" class="action-link action-link--primary"><i class="fas fa-paper-plane"></i> {{ hero_primary_button_text }}</a>
+                    <a href="#services" class="action-link action-link--outline"><i class="fas fa-wrench"></i> {{ hero_secondary_button_text }}</a>
+                </div>
+            </div>
+        </article>
+    </header>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="wrap">
+            <div class="header" data-aos="fade-up">
+                <span class="section-tag">Služby</span>
+                <h2 class="section-title">{{ services_title }}</h2>
+                <p class="section-desc">{{ services_description }}</p>
+            </div>
+            <div class="services-bento">
+                {{ collection:services }}
+                    <div class="srv {{ card_class ?? 'srv-wide' }}" data-aos="fade-up">
+                        <i class="{{ icon }} srv-deco"></i>
+                        <div class="srv-num">{{ if is_emergency }}<span class="pulse-dot"></span>{{ /if }}{{ count }} — {{ if is_emergency }}Pohotovost{{ else }}Základ{{ /if }}</div>
+                        <h3>{{ title }}</h3>
+                        <p>{{ description }}</p>
+                        <div class="srv-tags">
+                            {{ tags }}
+                                <span>{{ value }}</span>
+                            {{ /tags }}
+                        </div>
+                    </div>
+                {{ /collection:services }}
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="wrap">
+            <span class="section-tag" data-aos="fade-up">Moje práce</span>
+            <h2 class="section-title" data-aos="fade-up">{{ gallery_title }}</h2>
+            <p class="section-desc" data-aos="fade-up">{{ gallery_description }}</p>
+            <div class="gallery-grid">
+                {{ collection:gallery }}
+                    <div class="gallery-item {{ if is_tall }}tall{{ /if }}" style="background: linear-gradient(145deg, {{ gradient_from }}, {{ gradient_to }});" data-aos="zoom-in-up" {{ if !first }}data-aos-delay="{{ if count == 3 || count == 5 }}200{{ else }}100{{ /if }}"{{ /if }}>
+                        <div class="gallery-bg"><i class="{{ icon }}"></i></div>
+                        <div class="gallery-overlay">
+                            <span class="gallery-tag">{{ tag }}</span>
+                            <h4>{{ title }}</h4>
+                            <p>{{ description }}</p>
+                        </div>
+                    </div>
+                {{ /collection:gallery }}
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="wrap">
+            <div class="header" data-aos="fade-up">
+                <span class="section-tag">Recenze</span>
+                <h2 class="section-title">{{ reviews_title }}</h2>
+                <p class="section-desc">{{ reviews_description }}</p>
+            </div>
+            <div class="reviews-grid">
+                {{ collection:reviews }}
+                    <div class="rev" data-aos="fade-up">
+                        <div class="stars">
+                            {{ loop from="1" to="{rating}" }}
+                                <i class="fas fa-star"></i>
+                            {{ /loop }}
+                        </div>
+                        <blockquote>"{{ content }}"</blockquote>
+                        <div class="who">
+                            <div class="init">{{ author|substr:0:1 }}{{ author|substr:2:1 }}</div>
+                            <div>
+                                <div class="name">{{ author }}</div>
+                                <div class="loc">{{ location }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{ /collection:reviews }}
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="wrap">
+            <div style="margin-bottom:36px;" data-aos="fade-up">
+                <span class="section-tag">Kontakt</span>
+                <h2 class="section-title">{{ contact_title }}</h2>
+                <p class="section-desc">{{ contact_description }}</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left" data-aos="fade-right">
+                    <h3>{{ site:site_name }}</h3>
+                    <p>{{ contact_subtitle }}</p>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-phone"></i></div><div><div class="ci-l">Telefon</div><div class="ci-v">{{ site:phone }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-envelope"></i></div><div><div class="ci-l">Email</div><div class="ci-v">{{ site:email }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-location-dot"></i></div><div><div class="ci-l">Oblast</div><div class="ci-v">{{ site:location }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-clock"></i></div><div><div class="ci-l">Provozní doba</div><div class="ci-v">{{ site:working_hours }} | {{ site:emergency_hours }}</div></div></div>
+                </div>
+                <form class="contact-form" data-aos="fade-left" onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center;padding:48px 20px;\'><i class=\'fas fa-check-circle\' style=\'font-size:2rem;color:var(--cyan);\'></i><br><br><strong style=\'font-size:1.1rem;color:#fff;\'>Děkuji! Brzy se vám ozvu.</strong><br><span style=\'color:rgba(255,255,255,0.4);font-size:0.88rem;\'>— Roman</span></div>';">
+                    <input type="text" placeholder="Vaše jméno" required>
+                    <input type="tel" placeholder="Telefonní číslo" required>
+                    <input type="email" placeholder="Email (volitelné)">
+                    <textarea placeholder="S čím potřebujete pomoci?"></textarea>
+                    <button type="submit" class="btn "><i class="fas fa-paper-plane"></i> Odeslat zprávu</button>
+                </form>
+            </div>
+            <div class="footer-content">
+                <div class="socials">
+                    <a href="{{ site:facebook_url }}"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ site:instagram_url }}"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ site:whatsapp_url }}"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p>{{ site:copyright_text }}</p>
+                <p class="footer-credit">Vytvořeno s <span class="footer-credit__heart">♥</span> od <a href="https://robinhrdlicka.cz" target="_blank" rel="noopener">Robin Hrdlička</a></p>
+            </div>
+        </div>
+    </section>
+{{ /section:content }}

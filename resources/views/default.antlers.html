@@ -1,0 +1,240 @@
+{{ layout:welcome }}
+
+{{# This is the main content that will be injected into the `welcome.blade.php` layout #}}
+{{ section:content }}
+    <!-- NAV TOP BAR -->
+    <div class="nav-top" id="navTop">
+        <div class="nav-top-inner">
+            <div class="nav-top-left">
+                <span><i class="fas fa-clock"></i> Po–So 7:00–19:00</span>
+                <span><i class="fas fa-location-dot"></i> Louny a okolí</span>
+            </div>
+            <div class="nav-top-right">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <span style="color:rgba(255,255,255,0.08); margin: 0 4px;">|</span>
+                <a href="tel:+420123456789" class="nav-phone-highlight">
+                    <span class="phone-icon"><i class="fas fa-phone"></i></span>
+                    +420 123 456 789
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV MAIN -->
+    <nav id="mainNav">
+        <div class="wrap">
+            <div class="nav-left" data-aos="fade-right">
+                <a href="#" class="logo">
+                    <span class="logo-first">Roman</span>
+                    <span class="logo-last">Graupner</span>
+                    <span class="logo-drop"><svg viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C8 0 0 9 0 13a8 8 0 0016 0C16 9 8 0 8 0z" fill="url(#dropGrad)"/><defs><linearGradient id="dropGrad" x1="0" y1="0" x2="16" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#services">O mně</a></li>
+                    <li><a href="#services">Služby</a></li>
+                    <li><a href="#gallery">Práce</a></li>
+                    <li><a href="#reviews">Recenze</a></li>
+                    <li><a href="tel:+420123456789" class="mobile-phone" style="display:none;"><i class="fas fa-phone"></i> +420 123 456 789</a></li>
+                </ul>
+            </div>
+            <div class="nav-right" data-aos="fade-left">
+                <a href="tel:+420123456789" class="nav-phone"><i class="fas fa-phone"></i> +420 123 456 789</a>
+                <a href="#contact" class="nav-cta">Nezávazná poptávka</a>
+            </div>
+            <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <!-- Subtle falling water drops -->
+        <div class="hero-drops" aria-hidden="true">
+            <div class="hero-drop" style="left:8%; animation-duration:7s; animation-delay:0s; width:4.77px; height:10.54px;"></div>
+            <div class="hero-drop" style="left:22%; animation-duration:9s; animation-delay:2s; width:8.16px; height:12.94px;"></div>
+            <div class="hero-drop" style="left:35%; animation-duration:11s; animation-delay:4.5s; width:4.77px; height:8.16px;"></div>
+            <div class="hero-drop" style="left:52%; animation-duration:8s; animation-delay:1s; width:4.77px; height:10.54px;"></div>
+            <div class="hero-drop" style="left:67%; animation-duration:10s; animation-delay:3.5s; width:8.16px; height:12.94px;"></div>
+            <div class="hero-drop" style="left:78%; animation-duration:12s; animation-delay:6s; width:4.77px; height:8.16px;"></div>
+            <div class="hero-drop" style="left:91%; animation-duration:8.5s; animation-delay:0.5s; width:4.77px; height:10.54px;"></div>
+            <div class="hero-ripple" style="left:22%; bottom:18%; animation-delay:5s;"></div>
+            <div class="hero-ripple" style="left:67%; bottom:25%; animation-delay:8s;"></div>
+            <div class="hero-ripple" style="left:45%; bottom:12%; animation-delay:11s;"></div>
+        </div>
+        <div class="wrap">
+            <div class="hero-text" data-aos="fade-up">
+                <h1>{{ hero_heading }}</h1>
+                <p class="subtitle">{{ hero_subheading }}</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-glow"><i class="fas fa-paper-plane"></i> {{ hero_primary_button_text }}</a>
+                    <a href="#services" class="btn btn-ghost"><i class="fas fa-wrench"></i> {{ hero_secondary_button_text }}</a>
+                </div>
+            </div>
+            <div class="hero-right" data-aos="fade-up" data-aos-delay="200">
+                <div class="hero-photo">
+                    <div class="hero-photo-silhouette"><i class="fas fa-user-gear"></i></div>
+                    <div class="hero-photo-info">
+                        <div class="hero-photo-name">Roman Graupner</div>
+                        <div class="hero-photo-role">Nezávislý instalatér</div>
+                        <div class="hero-stats">
+                            <div class="hero-stat"><div class="num">15+</div><div class="label">Let</div></div>
+                            <div class="hero-stat"><div class="num">2k+</div><div class="label">Zakázek</div></div>
+                            <div class="hero-stat"><div class="num">24/7</div><div class="label">K dispozici</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="wrap">
+            <div class="header" data-aos="fade-up">
+                <span class="section-tag">Služby</span>
+                <h2 class="section-title">{{ services_title }}</h2>
+                <p class="section-desc">{{ services_description }}</p>
+            </div>
+            <div class="services-bento">
+                {{ collection:services }}
+                    <div class="srv srv-wide" data-aos="fade-up">
+                        <i class="{{ icon }} srv-deco"></i>
+                        <div class="srv-num">{{ count }} — Základ</div>
+                        <h3>{{ title }}</h3>
+                        <p>{{ description }}</p>
+                        <div class="srv-tags">
+                            {{ tags }}
+                                <span>{{ value }}</span>
+                            {{ /tags }}
+                        </div>
+                    </div>
+                {{ /collection:services }}
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="wrap">
+            <span class="section-tag" data-aos="fade-up">Moje práce</span>
+            <h2 class="section-title" data-aos="fade-up">Nedávné projekty</h2>
+            <p class="section-desc" data-aos="fade-up">Pohled na některé zakázky, které jsem dokončil pro klienty v Lounech a okolí.</p>
+            <div class="gallery-grid">
+                <!-- Item 1 — tall -->
+                <div class="gallery-item tall" style="background: linear-gradient(145deg, #1a3a5c, #0d2137);" data-aos="zoom-in-up">
+                    <div class="gallery-bg"><i class="fas fa-shower"></i></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Koupelna</span>
+                        <h4>Kompletní rekonstrukce koupelny</h4>
+                        <p>Celková přestavba — obklady, nová sanita, instalace sprchového koutu. Louny-Jih.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="gallery-item" style="background: linear-gradient(145deg, #1e3d5e, #122a44);" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="gallery-bg"><i class="fas fa-wrench"></i></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Oprava</span>
+                        <h4>Havarijní oprava potrubí</h4>
+                        <p>Prasklé potrubí ve sklepě — opraveno a vyměněno ještě téže noci.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="gallery-item" style="background: linear-gradient(145deg, #162f4d, #0e2035);" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="gallery-bg"><i class="fas fa-fire"></i></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Topení</span>
+                        <h4>Výměna kotle</h4>
+                        <p>Starý kotel vyměněn za energeticky úsporný kondenzační kotel.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="gallery-item" style="background: linear-gradient(145deg, #1b3754, #0f2540);" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="gallery-bg"><i class="fas fa-kitchen-set"></i></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Kuchyně</span>
+                        <h4>Kuchyňský dřez a myčka</h4>
+                        <p>Kompletní nové rozvody pod dřezem se zapojením myčky. Havířov.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="gallery-item" style="background: linear-gradient(145deg, #17334f, #0b1e33);" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="gallery-bg"><i class="fas fa-faucet-drip"></i></div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Odpady</span>
+                        <h4>Čištění kanalizace</h4>
+                        <p>Profesionální tlakové čištění ucpané hlavní kanalizační přípojky. Louny-Poruba.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="wrap">
+            <div class="header" data-aos="fade-up">
+                <span class="section-tag">Recenze</span>
+                <h2 class="section-title">{{ reviews_title }}</h2>
+                <p class="section-desc">{{ reviews_description }}</p>
+            </div>
+            <div class="reviews-grid">
+                {{ collection:reviews }}
+                    <div class="rev" data-aos="fade-up">
+                        <div class="stars">
+                            {{ loop from="1" to="{rating}" }}
+                                <i class="fas fa-star"></i>
+                            {{ /loop }}
+                        </div>
+                        <blockquote>"{{ content }}"</blockquote>
+                        <div class="who">
+                            <div class="init">{{ author|substr:0:1 }}{{ author|substr:2:1 }}</div>
+                            <div>
+                                <div class="name">{{ author }}</div>
+                                <div class="loc">{{ location }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {{ /collection:reviews }}
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="wrap">
+            <div style="margin-bottom:36px;" data-aos="fade-up">
+                <span class="section-tag">Kontakt</span>
+                <h2 class="section-title">{{ contact_title }}</h2>
+                <p class="section-desc">{{ contact_description }}</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left" data-aos="fade-right">
+                    <h3>Roman Graupner</h3>
+                    <p>Nezávislý instalatér pro Louny a okolí. K dispozici pro plánované práce i havarijní situace.</p>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-phone"></i></div><div><div class="ci-l">Telefon</div><div class="ci-v">+420 123 456 789</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-envelope"></i></div><div><div class="ci-l">Email</div><div class="ci-v">roman@graupner-plumbing.cz</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-location-dot"></i></div><div><div class="ci-l">Oblast</div><div class="ci-v">Louny a okolí</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-clock"></i></div><div><div class="ci-l">Provozní doba</div><div class="ci-v">Po–So 7:00–19:00 | Havárie 24/7</div></div></div>
+                </div>
+                <form class="contact-form" data-aos="fade-left" onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center;padding:48px 20px;\'><i class=\'fas fa-check-circle\' style=\'font-size:2rem;color:var(--cyan);\'></i><br><br><strong style=\'font-size:1.1rem;color:#fff;\'>Děkuji! Brzy se vám ozvu.</strong><br><span style=\'color:rgba(255,255,255,0.4);font-size:0.88rem;\'>— Roman</span></div>';">
+                    <input type="text" placeholder="Vaše jméno" required>
+                    <input type="tel" placeholder="Telefonní číslo" required>
+                    <input type="email" placeholder="Email (volitelné)">
+                    <textarea placeholder="S čím potřebujete pomoci?"></textarea>
+                    <button type="submit" class="btn btn-glow"><i class="fas fa-paper-plane"></i> Odeslat zprávu</button>
+                </form>
+            </div>
+            <div class="footer-content">
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p>&copy; 2026 Roman Graupner · Nezávislý instalatér · Louny</p>
+            </div>
+        </div>
+    </section>
+{{ /section:content }}

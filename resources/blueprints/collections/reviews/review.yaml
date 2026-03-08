@@ -1,0 +1,30 @@
+title: Review
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: author
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: location
+        field:
+          type: text
+      -
+        handle: content
+        field:
+          type: textarea
+          required: true
+          validate:
+            - required
+      -
+        handle: rating
+        field:
+          type: integer
+          display: 'Rating (1-5)'
+          validate:
+            - 'between:1,5'

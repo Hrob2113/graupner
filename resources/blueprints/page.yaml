@@ -1,0 +1,134 @@
+title: Page
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: bard
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+      -
+        handle: hero_heading
+        field:
+          type: text
+          display: 'Hero Heading'
+      -
+        handle: hero_subheading
+        field:
+          type: text
+          display: 'Hero Subheading'
+      -
+        handle: hero_primary_button_text
+        field:
+          type: text
+          display: 'Hero Primary Button Text'
+      -
+        handle: hero_secondary_button_text
+        field:
+          type: text
+          display: 'Hero Secondary Button Text'
+      -
+        handle: hero_badge_text
+        field:
+          type: text
+          display: 'Hero Badge Text'
+      -
+        handle: hero_stat_1_value
+        field:
+          type: text
+          display: 'Hero Stat 1 Value'
+      -
+        handle: hero_stat_1_label
+        field:
+          type: text
+          display: 'Hero Stat 1 Label'
+      -
+        handle: hero_stat_2_value
+        field:
+          type: text
+          display: 'Hero Stat 2 Value'
+      -
+        handle: hero_stat_2_label
+        field:
+          type: text
+          display: 'Hero Stat 2 Label'
+      -
+        handle: hero_stat_3_value
+        field:
+          type: text
+          display: 'Hero Stat 3 Value'
+      -
+        handle: hero_stat_3_label
+        field:
+          type: text
+          display: 'Hero Stat 3 Label'
+      -
+        handle: gallery_title
+        field:
+          type: text
+          display: 'Gallery Title'
+      -
+        handle: gallery_description
+        field:
+          type: textarea
+          display: 'Gallery Description'
+      -
+        handle: contact_subtitle
+        field:
+          type: textarea
+          display: 'Contact Subtitle'
+      -
+        handle: services_title
+        field:
+          type: text
+          display: 'Services Title'
+      -
+        handle: services_description
+        field:
+          type: textarea
+          display: 'Services Description'
+      -
+        handle: reviews_title
+        field:
+          type: text
+          display: 'Reviews Title'
+      -
+        handle: reviews_description
+        field:
+          type: textarea
+          display: 'Reviews Description'
+      -
+        handle: contact_title
+        field:
+          type: text
+          display: 'Contact Title'
+      -
+        handle: contact_description
+        field:
+          type: textarea
+          display: 'Contact Description'

@@ -1,0 +1,57 @@
+title: Site
+fields:
+  -
+    handle: site_name
+    field:
+      type: text
+      display: 'Site Name'
+  -
+    handle: site_role
+    field:
+      type: text
+      display: 'Site Role'
+  -
+    handle: phone
+    field:
+      type: text
+      display: Phone
+  -
+    handle: email
+    field:
+      type: text
+      display: Email
+  -
+    handle: location
+    field:
+      type: text
+      display: Location
+  -
+    handle: working_hours
+    field:
+      type: text
+      display: 'Working Hours'
+  -
+    handle: emergency_hours
+    field:
+      type: text
+      display: 'Emergency Hours'
+  -
+    handle: facebook_url
+    field:
+      type: text
+      display: 'Facebook URL'
+  -
+    handle: instagram_url
+    field:
+      type: text
+      display: 'Instagram URL'
+  -
+    handle: whatsapp_url
+    field:
+      type: text
+      display: 'WhatsApp URL'
+  -
+    handle: copyright_text
+    field:
+      type: text
+      display: 'Copyright Text'

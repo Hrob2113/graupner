@@ -1,0 +1,21 @@
+{{ layout:welcome }}
+
+<section class="reviews" id="reviews">
+    <div class="wrap">
+        <div class="header" data-aos="fade-up">
+            <span class="section-tag">Recenze</span>
+            <h2 class="section-title">{{ author }}</h2>
+            <p class="section-desc">{{ location }}</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="rev" data-aos="fade-up">
+                <div class="stars">
+                    {{ loop from="1" to="{rating}" }}
+                        <i class="fas fa-star"></i>
+                    {{ /loop }}
+                </div>
+                <blockquote>"{{ content }}"</blockquote>
+            </div>
+        </div>
+    </div>
+</section>

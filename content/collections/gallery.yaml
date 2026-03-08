@@ -1,0 +1,10 @@
+title: Gallery
+template: gallery/show
+layout: welcome
+revisions: false
+route: '/gallery/{slug}'
+sort_by: order
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

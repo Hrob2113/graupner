@@ -1,0 +1,48 @@
+title: 'Gallery Item'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      required: true
+      display: Title
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: tag
+    field:
+      type: text
+      display: Tag
+  -
+    handle: icon
+    field:
+      type: text
+      display: 'Icon Class'
+      instructions: 'Font Awesome class, e.g. fas fa-shower'
+  -
+    handle: image
+    field:
+      type: assets
+      display: Image
+      max_files: 1
+  -
+    handle: gradient_from
+    field:
+      type: text
+      display: 'Gradient From'
+      instructions: 'Hex color, e.g. #1a3a5c'
+  -
+    handle: gradient_to
+    field:
+      type: text
+      display: 'Gradient To'
+      instructions: 'Hex color, e.g. #0d2137'
+  -
+    handle: is_tall
+    field:
+      type: toggle
+      display: 'Tall Item'
+      instructions: 'Makes this item span two rows in the gallery grid'

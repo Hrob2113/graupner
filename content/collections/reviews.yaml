@@ -1,0 +1,10 @@
+title: Reviews
+template: reviews/show
+layout: welcome
+revisions: false
+route: '/reviews/{slug}'
+sort_by: order
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
