@@ -134,56 +134,56 @@
         </div>
     </section>
 
-    <!-- GALLERY -->
-    <section class="gallery" id="gallery">
-        <div class="wrap">
-            <span class="section-tag" data-aos="fade-up">{{ gallery_tag }}</span>
-            <h2 class="section-title" data-aos="fade-up">{{ gallery_title }}</h2>
-            <p class="section-desc" data-aos="fade-up">{{ gallery_description }}</p>
-            <div class="gallery-grid">
-                {{ collection:gallery }}
-                    <div class="gallery-item {{ if is_tall }}tall{{ /if }}" style="background: linear-gradient(145deg, {{ gradient_from }}, {{ gradient_to }});" data-aos="zoom-in-up" {{ if !first }}data-aos-delay="{{ if count == 3 || count == 5 }}200{{ else }}100{{ /if }}"{{ /if }}>
-                        <div class="gallery-bg"><i class="{{ icon }}"></i></div>
-                        <div class="gallery-overlay">
-                            <span class="gallery-tag">{{ tag }}</span>
-                            <h4>{{ title }}</h4>
-                            <p>{{ description }}</p>
-                        </div>
-                    </div>
-                {{ /collection:gallery }}
-            </div>
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section class="reviews" id="reviews">
-        <div class="wrap">
-            <div class="header" data-aos="fade-up">
-                <span class="section-tag">{{ reviews_tag }}</span>
-                <h2 class="section-title">{{ reviews_title }}</h2>
-                <p class="section-desc">{{ reviews_description }}</p>
-            </div>
-            <div class="reviews-grid">
-                {{ collection:reviews }}
-                    <div class="rev" data-aos="fade-up">
-                        <div class="stars">
-                            {{ loop from="1" to="{rating}" }}
-                                <i class="fas fa-star"></i>
-                            {{ /loop }}
-                        </div>
-                        <blockquote>"{{ content }}"</blockquote>
-                        <div class="who">
-                            <div class="init">{{ author|substr:0:1 }}{{ author|substr:2:1 }}</div>
-                            <div>
-                                <div class="name">{{ author }}</div>
-                                <div class="loc">{{ location }}</div>
-                            </div>
-                        </div>
-                    </div>
-                {{ /collection:reviews }}
-            </div>
-        </div>
-    </section>
+{{#     <!-- GALLERY --> #}}
+{{#     <section class="gallery" id="gallery"> #}}
+{{#         <div class="wrap"> #}}
+{{#             <span class="section-tag" data-aos="fade-up">{{ gallery_tag }}</span> #}}
+{{#             <h2 class="section-title" data-aos="fade-up">{{ gallery_title }}</h2> #}}
+{{#             <p class="section-desc" data-aos="fade-up">{{ gallery_description }}</p> #}}
+{{#             <div class="gallery-grid"> #}}
+{{#                 {{ collection:gallery }} #}}
+{{#                     <div class="gallery-item {{ if is_tall }}tall{{ /if }}" style="background: linear-gradient(145deg, {{ gradient_from }}, {{ gradient_to }});" data-aos="zoom-in-up" {{ if !first }}data-aos-delay="{{ if count == 3 || count == 5 }}200{{ else }}100{{ /if }}"{{ /if }}> #}}
+{{#                         <div class="gallery-bg"><i class="{{ icon }}"></i></div> #}}
+{{#                         <div class="gallery-overlay"> #}}
+{{#                             <span class="gallery-tag">{{ tag }}</span> #}}
+{{#                             <h4>{{ title }}</h4> #}}
+{{#                             <p>{{ description }}</p> #}}
+{{#                         </div> #}}
+{{#                     </div> #}}
+{{#                 {{ /collection:gallery }} #}}
+{{#             </div> #}}
+{{#         </div> #}}
+{{#     </section> #}}
+{{#  #}}
+{{#     <!-- REVIEWS --> #}}
+{{#     <section class="reviews" id="reviews"> #}}
+{{#         <div class="wrap"> #}}
+{{#             <div class="header" data-aos="fade-up"> #}}
+{{#                 <span class="section-tag">{{ reviews_tag }}</span> #}}
+{{#                 <h2 class="section-title">{{ reviews_title }}</h2> #}}
+{{#                 <p class="section-desc">{{ reviews_description }}</p> #}}
+{{#             </div> #}}
+{{#             <div class="reviews-grid"> #}}
+{{#                 {{ collection:reviews }} #}}
+{{#                     <div class="rev" data-aos="fade-up"> #}}
+{{#                         <div class="stars"> #}}
+{{#                             {{ loop from="1" to="{rating}" }} #}}
+{{#                                 <i class="fas fa-star"></i> #}}
+{{#                             {{ /loop }} #}}
+{{#                         </div> #}}
+{{#                         <blockquote>"{{ content }}"</blockquote> #}}
+{{#                         <div class="who"> #}}
+{{#                             <div class="init">{{ author|substr:0:1 }}{{ author|substr:2:1 }}</div> #}}
+{{#                             <div> #}}
+{{#                                 <div class="name">{{ author }}</div> #}}
+{{#                                 <div class="loc">{{ location }}</div> #}}
+{{#                             </div> #}}
+{{#                         </div> #}}
+{{#                     </div> #}}
+{{#                 {{ /collection:reviews }} #}}
+{{#             </div> #}}
+{{#         </div> #}}
+{{#     </section> #}}
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
