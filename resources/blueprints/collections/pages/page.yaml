@@ -1,243 +1,257 @@
 title: Page
-sections:
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: title
-        field:
-          type: text
-          required: true
-          validate:
-            - required
-      -
-        handle: content
-        field:
-          type: bard
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-          save_html: false
-          toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          reading_time: false
-          fullscreen: true
-          allow_source: true
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: bard
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+              save_html: false
+              toolbar_mode: fixed
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              reading_time: false
+              fullscreen: true
+              allow_source: true
   hero:
     display: Hero
-    fields:
+    sections:
       -
-        handle: hero_heading
-        field:
-          type: text
-          display: 'Hero Heading'
-          instructions: 'Supports HTML (e.g. <br>, <span class="accent-text">).'
-      -
-        handle: hero_subheading
-        field:
-          type: text
-          display: 'Hero Subheading'
-      -
-        handle: hero_badge_text
-        field:
-          type: text
-          display: 'Hero Badge Text'
-      -
-        handle: hero_primary_button_text
-        field:
-          type: text
-          display: 'Hero Primary Button Text'
-      -
-        handle: hero_secondary_button_text
-        field:
-          type: text
-          display: 'Hero Secondary Button Text'
-      -
-        handle: hero_stat_1_value
-        field:
-          type: text
-          display: 'Hero Stat 1 Value'
-      -
-        handle: hero_stat_1_label
-        field:
-          type: text
-          display: 'Hero Stat 1 Label'
-      -
-        handle: hero_stat_2_value
-        field:
-          type: text
-          display: 'Hero Stat 2 Value'
-      -
-        handle: hero_stat_2_label
-        field:
-          type: text
-          display: 'Hero Stat 2 Label'
-      -
-        handle: hero_stat_3_value
-        field:
-          type: text
-          display: 'Hero Stat 3 Value'
-      -
-        handle: hero_stat_3_label
-        field:
-          type: text
-          display: 'Hero Stat 3 Label'
+        fields:
+          -
+            handle: hero_heading
+            field:
+              type: text
+              display: 'Hero Heading'
+              instructions: 'Supports HTML (e.g. <br>, <span class="accent-text">).'
+          -
+            handle: hero_subheading
+            field:
+              type: text
+              display: 'Hero Subheading'
+          -
+            handle: hero_badge_text
+            field:
+              type: text
+              display: 'Hero Badge Text'
+          -
+            handle: hero_primary_button_text
+            field:
+              type: text
+              display: 'Hero Primary Button Text'
+          -
+            handle: hero_secondary_button_text
+            field:
+              type: text
+              display: 'Hero Secondary Button Text'
+          -
+            handle: hero_stat_1_value
+            field:
+              type: text
+              display: 'Hero Stat 1 Value'
+          -
+            handle: hero_stat_1_label
+            field:
+              type: text
+              display: 'Hero Stat 1 Label'
+          -
+            handle: hero_stat_2_value
+            field:
+              type: text
+              display: 'Hero Stat 2 Value'
+          -
+            handle: hero_stat_2_label
+            field:
+              type: text
+              display: 'Hero Stat 2 Label'
+          -
+            handle: hero_stat_3_value
+            field:
+              type: text
+              display: 'Hero Stat 3 Value'
+          -
+            handle: hero_stat_3_label
+            field:
+              type: text
+              display: 'Hero Stat 3 Label'
   services:
     display: Services
-    fields:
+    sections:
       -
-        handle: services_tag
-        field:
-          type: text
-          display: 'Services Section Tag'
-          instructions: 'Small label above the section title.'
-      -
-        handle: services_title
-        field:
-          type: text
-          display: 'Services Title'
-      -
-        handle: services_description
-        field:
-          type: textarea
-          display: 'Services Description'
-      -
-        handle: service_label_basic
-        field:
-          type: text
-          display: 'Service Label — Basic'
-          instructions: 'Label shown on standard service cards (e.g. "Základ").'
-      -
-        handle: service_label_emergency
-        field:
-          type: text
-          display: 'Service Label — Emergency'
-          instructions: 'Label shown on emergency service cards (e.g. "Pohotovost").'
+        fields:
+          -
+            handle: services_tag
+            field:
+              type: text
+              display: 'Services Section Tag'
+              instructions: 'Small label above the section title.'
+          -
+            handle: services_title
+            field:
+              type: text
+              display: 'Services Title'
+          -
+            handle: services_description
+            field:
+              type: textarea
+              display: 'Services Description'
+          -
+            handle: service_label_basic
+            field:
+              type: text
+              display: 'Service Label — Basic'
+              instructions: 'Label shown on standard service cards (e.g. "Základ").'
+          -
+            handle: service_label_emergency
+            field:
+              type: text
+              display: 'Service Label — Emergency'
+              instructions: 'Label shown on emergency service cards (e.g. "Pohotovost").'
   gallery:
     display: Gallery
-    fields:
+    sections:
       -
-        handle: gallery_tag
-        field:
-          type: text
-          display: 'Gallery Section Tag'
-      -
-        handle: gallery_title
-        field:
-          type: text
-          display: 'Gallery Title'
-      -
-        handle: gallery_description
-        field:
-          type: textarea
-          display: 'Gallery Description'
+        fields:
+          -
+            handle: gallery_tag
+            field:
+              type: text
+              display: 'Gallery Section Tag'
+          -
+            handle: gallery_title
+            field:
+              type: text
+              display: 'Gallery Title'
+          -
+            handle: gallery_description
+            field:
+              type: textarea
+              display: 'Gallery Description'
   reviews:
     display: Reviews
-    fields:
+    sections:
       -
-        handle: reviews_tag
-        field:
-          type: text
-          display: 'Reviews Section Tag'
-      -
-        handle: reviews_title
-        field:
-          type: text
-          display: 'Reviews Title'
-      -
-        handle: reviews_description
-        field:
-          type: textarea
-          display: 'Reviews Description'
+        fields:
+          -
+            handle: reviews_tag
+            field:
+              type: text
+              display: 'Reviews Section Tag'
+          -
+            handle: reviews_title
+            field:
+              type: text
+              display: 'Reviews Title'
+          -
+            handle: reviews_description
+            field:
+              type: textarea
+              display: 'Reviews Description'
   contact:
     display: Contact
-    fields:
+    sections:
       -
-        handle: contact_tag
-        field:
-          type: text
-          display: 'Contact Section Tag'
-      -
-        handle: contact_title
-        field:
-          type: text
-          display: 'Contact Title'
-      -
-        handle: contact_description
-        field:
-          type: textarea
-          display: 'Contact Description'
-      -
-        handle: contact_subtitle
-        field:
-          type: textarea
-          display: 'Contact Subtitle'
-      -
-        handle: contact_phone_label
-        field:
-          type: text
-          display: 'Contact Phone Label'
-      -
-        handle: contact_email_label
-        field:
-          type: text
-          display: 'Contact Email Label'
-      -
-        handle: contact_area_label
-        field:
-          type: text
-          display: 'Contact Area Label'
-      -
-        handle: contact_hours_label
-        field:
-          type: text
-          display: 'Contact Hours Label'
+        fields:
+          -
+            handle: contact_tag
+            field:
+              type: text
+              display: 'Contact Section Tag'
+          -
+            handle: contact_title
+            field:
+              type: text
+              display: 'Contact Title'
+          -
+            handle: contact_description
+            field:
+              type: textarea
+              display: 'Contact Description'
+          -
+            handle: contact_subtitle
+            field:
+              type: textarea
+              display: 'Contact Subtitle'
+          -
+            handle: contact_phone_label
+            field:
+              type: text
+              display: 'Contact Phone Label'
+          -
+            handle: contact_email_label
+            field:
+              type: text
+              display: 'Contact Email Label'
+          -
+            handle: contact_area_label
+            field:
+              type: text
+              display: 'Contact Area Label'
+          -
+            handle: contact_hours_label
+            field:
+              type: text
+              display: 'Contact Hours Label'
   contact_form:
     display: 'Contact Form'
-    fields:
+    sections:
       -
-        handle: form_name_placeholder
-        field:
-          type: text
-          display: 'Name Field Placeholder'
-      -
-        handle: form_phone_placeholder
-        field:
-          type: text
-          display: 'Phone Field Placeholder'
-      -
-        handle: form_email_placeholder
-        field:
-          type: text
-          display: 'Email Field Placeholder'
-      -
-        handle: form_message_placeholder
-        field:
-          type: text
-          display: 'Message Field Placeholder'
-      -
-        handle: form_button_text
-        field:
-          type: text
-          display: 'Submit Button Text'
-      -
-        handle: form_success_message
-        field:
-          type: text
-          display: 'Success Message'
-          instructions: 'Shown after the form is submitted.'
-      -
-        handle: form_success_signature
-        field:
-          type: text
-          display: 'Success Signature'
-          instructions: 'Signature shown below the success message (e.g. "— Roman").'
+        fields:
+          -
+            handle: form_name_placeholder
+            field:
+              type: text
+              display: 'Name Field Placeholder'
+          -
+            handle: form_phone_placeholder
+            field:
+              type: text
+              display: 'Phone Field Placeholder'
+          -
+            handle: form_email_placeholder
+            field:
+              type: text
+              display: 'Email Field Placeholder'
+          -
+            handle: form_message_placeholder
+            field:
+              type: text
+              display: 'Message Field Placeholder'
+          -
+            handle: form_button_text
+            field:
+              type: text
+              display: 'Submit Button Text'
+          -
+            handle: form_success_message
+            field:
+              type: text
+              display: 'Success Message'
+              instructions: 'Shown after the form is submitted.'
+          -
+            handle: form_success_signature
+            field:
+              type: text
+              display: 'Success Signature'
+              instructions: 'Signature shown below the success message (e.g. "— Roman").'
