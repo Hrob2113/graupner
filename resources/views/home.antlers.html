@@ -32,15 +32,15 @@
                     <span class="logo-drop"><svg viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C8 0 0 9 0 13a8 8 0 0016 0C16 9 8 0 8 0z" fill="url(#dropGrad)"/><defs><linearGradient id="dropGrad" x1="0" y1="0" x2="16" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg></span>
                 </a>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#services">Služby</a></li>
-                    <li><a href="#gallery">Práce</a></li>
-                    <li><a href="#reviews">Recenze</a></li>
+                    <li><a href="#services">{{ site:nav_link_services }}</a></li>
+                    <li><a href="#gallery">{{ site:nav_link_gallery }}</a></li>
+                    <li><a href="#reviews">{{ site:nav_link_reviews }}</a></li>
                     <li><a href="tel:{{ site:phone }}" class="mobile-phone" style="display:none;"><i class="fas fa-phone"></i> {{ site:phone }}</a></li>
                 </ul>
             </div>
             <div class="nav-right" data-aos="fade-left">
                 <a href="tel:{{ site:phone }}" class="nav-phone"><i class="fas fa-phone"></i> {{ site:phone }}</a>
-                <a href="#contact" class="nav-cta">Nezávazná poptávka</a>
+                <a href="#contact" class="nav-cta">{{ site:nav_cta_text }}</a>
             </div>
             <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><i class="fas fa-bars"></i></button>
         </div>
@@ -112,7 +112,7 @@
     <section class="services" id="services">
         <div class="wrap">
             <div class="header" data-aos="fade-up">
-                <span class="section-tag">Služby</span>
+                <span class="section-tag">{{ services_tag }}</span>
                 <h2 class="section-title">{{ services_title }}</h2>
                 <p class="section-desc">{{ services_description }}</p>
             </div>
@@ -120,7 +120,7 @@
                 {{ collection:services }}
                     <div class="srv {{ card_class ?? 'srv-wide' }}" data-aos="fade-up">
                         <i class="{{ icon }} srv-deco"></i>
-                        <div class="srv-num">{{ if is_emergency }}<span class="pulse-dot"></span>{{ /if }}{{ count }} — {{ if is_emergency }}Pohotovost{{ else }}Základ{{ /if }}</div>
+                        <div class="srv-num">{{ if is_emergency }}<span class="pulse-dot"></span>{{ /if }}{{ count }} — {{ if is_emergency }}{{ service_label_emergency }}{{ else }}{{ service_label_basic }}{{ /if }}</div>
                         <h3>{{ title }}</h3>
                         <p>{{ description }}</p>
                         <div class="srv-tags">
@@ -137,7 +137,7 @@
     <!-- GALLERY -->
     <section class="gallery" id="gallery">
         <div class="wrap">
-            <span class="section-tag" data-aos="fade-up">Moje práce</span>
+            <span class="section-tag" data-aos="fade-up">{{ gallery_tag }}</span>
             <h2 class="section-title" data-aos="fade-up">{{ gallery_title }}</h2>
             <p class="section-desc" data-aos="fade-up">{{ gallery_description }}</p>
             <div class="gallery-grid">
@@ -159,7 +159,7 @@
     <section class="reviews" id="reviews">
         <div class="wrap">
             <div class="header" data-aos="fade-up">
-                <span class="section-tag">Recenze</span>
+                <span class="section-tag">{{ reviews_tag }}</span>
                 <h2 class="section-title">{{ reviews_title }}</h2>
                 <p class="section-desc">{{ reviews_description }}</p>
             </div>
@@ -189,7 +189,7 @@
     <section class="contact" id="contact">
         <div class="wrap">
             <div style="margin-bottom:36px;" data-aos="fade-up">
-                <span class="section-tag">Kontakt</span>
+                <span class="section-tag">{{ contact_tag }}</span>
                 <h2 class="section-title">{{ contact_title }}</h2>
                 <p class="section-desc">{{ contact_description }}</p>
             </div>
@@ -197,17 +197,17 @@
                 <div class="contact-left" data-aos="fade-right">
                     <h3>{{ site:site_name }}</h3>
                     <p>{{ contact_subtitle }}</p>
-                    <div class="ci"><div class="ci-i"><i class="fas fa-phone"></i></div><div><div class="ci-l">Telefon</div><div class="ci-v">{{ site:phone }}</div></div></div>
-                    <div class="ci"><div class="ci-i"><i class="fas fa-envelope"></i></div><div><div class="ci-l">Email</div><div class="ci-v">{{ site:email }}</div></div></div>
-                    <div class="ci"><div class="ci-i"><i class="fas fa-location-dot"></i></div><div><div class="ci-l">Oblast</div><div class="ci-v">{{ site:location }}</div></div></div>
-                    <div class="ci"><div class="ci-i"><i class="fas fa-clock"></i></div><div><div class="ci-l">Provozní doba</div><div class="ci-v">{{ site:working_hours }} | {{ site:emergency_hours }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-phone"></i></div><div><div class="ci-l">{{ contact_phone_label }}</div><div class="ci-v">{{ site:phone }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-envelope"></i></div><div><div class="ci-l">{{ contact_email_label }}</div><div class="ci-v">{{ site:email }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-location-dot"></i></div><div><div class="ci-l">{{ contact_area_label }}</div><div class="ci-v">{{ site:location }}</div></div></div>
+                    <div class="ci"><div class="ci-i"><i class="fas fa-clock"></i></div><div><div class="ci-l">{{ contact_hours_label }}</div><div class="ci-v">{{ site:working_hours }} | {{ site:emergency_hours }}</div></div></div>
                 </div>
-                <form class="contact-form" data-aos="fade-left" onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center;padding:48px 20px;\'><i class=\'fas fa-check-circle\' style=\'font-size:2rem;color:var(--cyan);\'></i><br><br><strong style=\'font-size:1.1rem;color:#fff;\'>Děkuji! Brzy se vám ozvu.</strong><br><span style=\'color:rgba(255,255,255,0.4);font-size:0.88rem;\'>— Roman</span></div>';">
-                    <input type="text" placeholder="Vaše jméno" required>
-                    <input type="tel" placeholder="Telefonní číslo" required>
-                    <input type="email" placeholder="Email (volitelné)">
-                    <textarea placeholder="S čím potřebujete pomoci?"></textarea>
-                    <button type="submit" class="btn "><i class="fas fa-paper-plane"></i> Odeslat zprávu</button>
+                <form class="contact-form" data-aos="fade-left" data-success-message="{{ form_success_message }}" data-success-signature="{{ form_success_signature }}" onsubmit="event.preventDefault(); var d=this.dataset; this.innerHTML='<div style=\'text-align:center;padding:48px 20px;\'><i class=\'fas fa-check-circle\' style=\'font-size:2rem;color:var(--cyan);\'></i><br><br><strong style=\'font-size:1.1rem;color:#fff;\'>'+d.successMessage+'</strong><br><span style=\'color:rgba(255,255,255,0.4);font-size:0.88rem;\'>'+d.successSignature+'</span></div>';">
+                    <input type="text" placeholder="{{ form_name_placeholder }}" required>
+                    <input type="tel" placeholder="{{ form_phone_placeholder }}" required>
+                    <input type="email" placeholder="{{ form_email_placeholder }}">
+                    <textarea placeholder="{{ form_message_placeholder }}"></textarea>
+                    <button type="submit" class="btn "><i class="fas fa-paper-plane"></i> {{ form_button_text }}</button>
                 </form>
             </div>
             <div class="footer-content">

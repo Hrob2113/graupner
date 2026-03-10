@@ -55,3 +55,23 @@ fields:
     field:
       type: text
       display: 'Copyright Text'
+  -
+    handle: nav_link_services
+    field:
+      type: text
+      display: 'Nav Link — Services'
+  -
+    handle: nav_link_gallery
+    field:
+      type: text
+      display: 'Nav Link — Gallery'
+  -
+    handle: nav_link_reviews
+    field:
+      type: text
+      display: 'Nav Link — Reviews'
+  -
+    handle: nav_cta_text
+    field:
+      type: text
+      display: 'Nav CTA Button Text'
